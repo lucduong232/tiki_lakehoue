@@ -1,0 +1,7 @@
+tiki_lakehouse:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: /Users/user/Documents/hoc_tap/data_preprocessing/tiki_lakehouse/data/warehouse.duckdb
+      threads: 1

@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: silver
+    schema: main
+    description: "Silver layer tables produced by bronze_to_silver.py"
+    tables:
+      - name: silver_listing
+        description: "Cleaned product listing data from Tiki crawl"
+      - name: silver_detail
+        description: "Cleaned product detail data from Tiki crawl"
+      - name: silver_reviews
+        description: "Cleaned product reviews data from Tiki crawl"

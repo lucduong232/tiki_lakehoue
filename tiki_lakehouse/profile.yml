@@ -1,7 +1,0 @@
-tiki_lakehouse:
-  target: dev
-  outputs:
-    dev:
-      type: duckdb
-      path: ../data/warehouse.duckdb   # relative to dbt_tiki/, resolves to project root
-      threads: 1

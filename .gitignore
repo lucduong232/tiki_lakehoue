@@ -1,3 +1,7 @@
 .env
 __pycache__/
 .python-version
+.vscode
+dev.duckdb
+logs/dbt.log
+pipeline/test.py

@@ -6,10 +6,10 @@ con = duckdb.connect("data/warehouse.duckdb")
 print(con.execute("SHOW TABLES").fetchdf())
 
 # Xem schema của bảng
-print(con.execute("DESCRIBE silver_detail").fetchdf())
+print(con.execute("DESCRIBE silver_reviews").fetchdf())
 
 # Query với spec đã flatten
 print(con.execute("""
     SELECT *
-    FROM silver_detail
+    FROM silver_listing
 """).fetchdf())
