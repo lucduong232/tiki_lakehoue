@@ -1,0 +1,152 @@
+[0m16:32:36.178460 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1056a9b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10aefb980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b4c7fb0>]}
+
+
+============================== 16:32:36.197782 | a943249e-aef2-4aaf-bf38-0520ab8b0b6a ==============================
+[0m16:32:36.197782 [info ] [MainThread]: Running with dbt=1.11.12
+[0m16:32:36.198120 [debug] [MainThread]: running dbt with arguments {'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'indirect_selection': 'eager', 'printer_width': '80', 'version_check': 'True', 'profiles_dir': '/Users/user/.dbt', 'send_anonymous_usage_stats': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'write_json': 'True', 'use_colors': 'True', 'quiet': 'False', 'target_path': 'None', 'log_format': 'default', 'cache_selected_only': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'static_parser': 'True', 'log_cache_events': 'False', 'no_print': 'None', 'debug': 'False', 'invocation_command': 'dbt init', 'use_experimental_parser': 'False'}
+[0m16:32:36.231858 [info ] [MainThread]: Creating dbt configuration folder at /Users/user/.dbt
+[0m16:33:37.387754 [error] [MainThread]: Encountered an error:
+
+[0m16:33:37.398859 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/user/Documents/hoc_tap/data_preprocessing/Tiki_support/.venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/user/Documents/hoc_tap/data_preprocessing/Tiki_support/.venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/user/Documents/hoc_tap/data_preprocessing/Tiki_support/.venv/lib/python3.12/site-packages/dbt/cli/main.py", line 488, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/Users/user/Documents/hoc_tap/data_preprocessing/Tiki_support/.venv/lib/python3.12/site-packages/dbt/task/init.py", line 324, in run
+    project_name = self.get_valid_project_name()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/user/Documents/hoc_tap/data_preprocessing/Tiki_support/.venv/lib/python3.12/site-packages/dbt/task/init.py", line 278, in get_valid_project_name
+    name = click.prompt("Enter a name for your project (letters, digits, underscore)")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/user/Documents/hoc_tap/data_preprocessing/Tiki_support/.venv/lib/python3.12/site-packages/click/termui.py", line 218, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/Users/user/Documents/hoc_tap/data_preprocessing/Tiki_support/.venv/lib/python3.12/site-packages/click/termui.py", line 201, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m16:33:37.446828 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 61.308014, "process_in_blocks": "0", "process_kernel_time": 0.148694, "process_mem_max_rss": "128663552", "process_out_blocks": "0", "process_user_time": 0.704421}
+[0m16:33:37.447432 [debug] [MainThread]: Command `dbt init` failed at 16:33:37.447334 after 61.31 seconds
+[0m16:33:37.448051 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b4c79b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b5003e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b503200>]}
+[0m16:33:37.448480 [debug] [MainThread]: Flushing usage events
+[0m16:34:44.592373 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104835eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108604680>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089166f0>]}
+
+
+============================== 16:34:44.595459 | dfcc63b4-8f4d-4e4b-a11d-c52bec298dbb ==============================
+[0m16:34:44.595459 [info ] [MainThread]: Running with dbt=1.11.12
+[0m16:34:44.595762 [debug] [MainThread]: running dbt with arguments {'empty': 'None', 'profiles_dir': '/Users/user/.dbt', 'fail_fast': 'False', 'quiet': 'False', 'write_json': 'True', 'target_path': 'None', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'introspect': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'no_print': 'None', 'use_colors': 'True', 'invocation_command': 'dbt init', 'partial_parse': 'True', 'debug': 'False', 'printer_width': '80', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'log_cache_events': 'False'}
+[0m16:38:41.041137 [debug] [MainThread]: Starter project path: /Applications/anaconda3/envs/tiki_crawler/lib/python3.12/site-packages/dbt/include/starter_project
+[0m16:38:41.055038 [info ] [MainThread]: 
+Your new dbt project "Tiki_support" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:38:41.055387 [info ] [MainThread]: Setting up your profile.
+[0m16:39:11.223293 [info ] [MainThread]: Profile Tiki_support written to /Users/user/.dbt/profiles.yml using target's sample configuration. Once updated, you'll be able to start developing with dbt.
+[0m16:39:11.602556 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 267.06323, "process_in_blocks": "0", "process_kernel_time": 0.197813, "process_mem_max_rss": "113426432", "process_out_blocks": "0", "process_user_time": 0.801836}
+[0m16:39:11.603742 [debug] [MainThread]: Command `dbt init` succeeded at 16:39:11.603507 after 267.06 seconds
+[0m16:39:11.604647 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10091ec00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089b9eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108a3a5d0>]}
+[0m16:39:11.605398 [debug] [MainThread]: Flushing usage events
+[0m16:39:12.722167 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:41:57.785212 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111cc1a60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112416b70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1124167b0>]}
+
+
+============================== 16:41:57.788001 | 6694be1c-5a1a-4ba4-860b-ab4901bd277e ==============================
+[0m16:41:57.788001 [info ] [MainThread]: Running with dbt=1.11.12
+[0m16:41:57.788292 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '/Users/user/.dbt', 'invocation_command': 'dbt debug', 'partial_parse': 'True', 'log_format': 'default', 'fail_fast': 'False', 'write_json': 'True', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'use_colors': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'version_check': 'True', 'log_path': 'logs', 'printer_width': '80', 'indirect_selection': 'eager', 'no_print': 'None', 'debug': 'False', 'introspect': 'True'}
+[0m16:41:57.797202 [info ] [MainThread]: dbt version: 1.11.12
+[0m16:41:57.797403 [info ] [MainThread]: python version: 3.12.13
+[0m16:41:57.797540 [info ] [MainThread]: python path: /Applications/anaconda3/envs/tiki_crawler/bin/python3.12
+[0m16:41:57.797662 [info ] [MainThread]: os info: macOS-26.3-arm64-arm-64bit
+[0m16:41:57.922457 [info ] [MainThread]: Using profiles dir at /Users/user/.dbt
+[0m16:41:57.922715 [info ] [MainThread]: Using profiles.yml file at /Users/user/.dbt/profiles.yml
+[0m16:41:57.922869 [info ] [MainThread]: Using dbt_project.yml file at /Users/user/Documents/hoc_tap/data_preprocessing/Tiki_support/dbt_project.yml
+[0m16:41:57.924124 [info ] [MainThread]: adapter type: duckdb
+[0m16:41:57.924312 [info ] [MainThread]: adapter version: 1.10.1
+[0m16:41:57.924469 [info ] [MainThread]: Configuration:
+[0m16:41:57.924590 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:41:57.924706 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m16:41:57.924821 [info ] [MainThread]: Required dependencies:
+[0m16:41:57.924974 [debug] [MainThread]: Executing "git --help"
+[0m16:41:57.935779 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:41:57.936269 [debug] [MainThread]: STDERR: "b''"
+[0m16:41:57.936444 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:41:57.936634 [info ] [MainThread]: Connection:
+[0m16:41:57.936803 [info ] [MainThread]:   database: dev
+[0m16:41:57.936916 [info ] [MainThread]:   schema: main
+[0m16:41:57.937027 [info ] [MainThread]:   path: dev.duckdb
+[0m16:41:57.937137 [info ] [MainThread]:   config_options: None
+[0m16:41:57.937257 [info ] [MainThread]:   extensions: None
+[0m16:41:57.937364 [info ] [MainThread]:   settings: {}
+[0m16:41:57.937475 [info ] [MainThread]:   external_root: .
+[0m16:41:57.937579 [info ] [MainThread]:   use_credential_provider: None
+[0m16:41:57.937687 [info ] [MainThread]:   attach: None
+[0m16:41:57.937789 [info ] [MainThread]:   filesystems: None
+[0m16:41:57.937904 [info ] [MainThread]:   remote: None
+[0m16:41:57.938006 [info ] [MainThread]:   plugins: None
+[0m16:41:57.938107 [info ] [MainThread]:   disable_transactions: False
+[0m16:41:57.938440 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m16:41:58.051618 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m16:41:58.082802 [debug] [MainThread]: Using duckdb connection "debug"
+[0m16:41:58.082995 [debug] [MainThread]: On debug: select 1 as id
+[0m16:41:58.083124 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:41:58.096109 [debug] [MainThread]: SQL status: OK in 0.013 seconds
+[0m16:41:58.096589 [debug] [MainThread]: On debug: Close
+[0m16:41:58.097033 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m16:41:58.097188 [info ] [MainThread]: [31m1 check failed:[0m
+[0m16:41:58.097310 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/user/Documents/hoc_tap/data_preprocessing/Tiki_support/dbt_project.yml> not found
+
+[0m16:41:58.099419 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.3509741, "process_in_blocks": "0", "process_kernel_time": 0.207937, "process_mem_max_rss": "140132352", "process_out_blocks": "0", "process_user_time": 0.734825}
+[0m16:41:58.099654 [debug] [MainThread]: Command `dbt debug` failed at 16:41:58.099607 after 0.35 seconds
+[0m16:41:58.099806 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:41:58.099959 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x101342bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1126195b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11246ea80>]}
+[0m16:41:58.100150 [debug] [MainThread]: Flushing usage events
+[0m16:41:59.214910 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:05:54.731336 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11566f110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1200169f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x120016750>]}
+
+
+============================== 18:05:54.734646 | f765f8d2-0d83-4013-9514-dd42df88d3be ==============================
+[0m18:05:54.734646 [info ] [MainThread]: Running with dbt=1.11.12
+[0m18:05:54.734950 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'target_path': 'None', 'log_format': 'default', 'use_colors': 'True', 'version_check': 'True', 'invocation_command': 'dbt init .', 'indirect_selection': 'eager', 'profiles_dir': '/Users/user/.dbt', 'use_experimental_parser': 'False', 'empty': 'None', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'write_json': 'True', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'introspect': 'True', 'debug': 'False', 'printer_width': '80', 'warn_error': 'None', 'log_cache_events': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'static_parser': 'True'}
+[0m18:05:58.583142 [debug] [MainThread]: Starter project path: /Applications/anaconda3/envs/tiki_crawler/lib/python3.12/site-packages/dbt/include/starter_project
+[0m18:05:58.597939 [info ] [MainThread]: 
+Your new dbt project "tiki_lakehouse" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m18:05:58.598715 [info ] [MainThread]: Setting up your profile.
+[0m18:06:09.340619 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 14.649272, "process_in_blocks": "0", "process_kernel_time": 0.171936, "process_mem_max_rss": "127696896", "process_out_blocks": "0", "process_user_time": 0.725069}
+[0m18:06:09.340976 [debug] [MainThread]: Command `dbt init` succeeded at 18:06:09.340910 after 14.65 seconds
+[0m18:06:09.341187 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x117ad06e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12013a150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12011c5c0>]}
+[0m18:06:09.341389 [debug] [MainThread]: Flushing usage events
+[0m18:06:10.336582 [debug] [MainThread]: An error was encountered while trying to flush usage events
