@@ -1,0 +1,58 @@
+version: 2
+
+models:
+  - name: fct_tiki_books
+    description: "Gold fact table — books with enriched listing + detail data"
+    columns:
+      - name: product_id
+        description: "Primary key"
+        tests:
+          - not_null
+          - unique
+
+      - name: name
+        tests:
+          - not_null
+
+      - name: price
+        tests:
+          - not_null
+
+      - name: rating_average
+        tests:
+          - not_null
+
+      - name: discount_pct
+        description: "Computed: (list_price - price) / list_price * 100"
+        tests:
+          - not_null
+
+      - name: has_reviews
+        description: "Computed: review_count > 0"
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+  - name: fct_tiki_reviews
+    description: "Gold fact table — reviews joined with book metadata"
+    columns:
+      - name: review_id
+        description: "Primary key"
+        tests:
+          - not_null
+          - unique
+
+      - name: product_id
+        description: "FK to fct_tiki_books"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('fct_tiki_books')
+              field: product_id
+
+      - name: rating
+        tests:
+          - not_null
+          - accepted_values:
+              values: [1, 2, 3, 4, 5]

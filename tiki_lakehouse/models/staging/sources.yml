@@ -7,7 +7,70 @@ sources:
     tables:
       - name: silver_listing
         description: "Cleaned product listing data from Tiki crawl"
+        columns: 
+          - name: id
+            description: "Unique product identifier from Tiki"
+            tests: 
+              - not_null
+              - unique
+          - name: name
+            tests:
+              - not_null
+ 
+          - name: price
+            tests:
+              - not_null
+ 
+          - name: rating_average
+            tests:
+              - not_null
+ 
+          - name: extracted_at
+            tests:
+              - not_null
+
       - name: silver_detail
-        description: "Cleaned product detail data from Tiki crawl"
+        description: "Book detail data crawled from Tiki product pages"
+        columns:
+          - name: product_id
+            description: "Unique product identifier — FK to silver_listing.id"
+            tests:
+              - not_null
+              - unique
+ 
+          - name: name
+            tests:
+              - not_null
+ 
+          - name: price
+            tests:
+              - not_null
+ 
+          - name: extracted_at
+            tests:
+              - not_null
       - name: silver_reviews
-        description: "Cleaned product reviews data from Tiki crawl"
+        description: "User reviews crawled from Tiki product review pages"
+        columns:
+          - name: review_id
+            description: "Unique review identifier"
+            tests:
+              - not_null
+              - unique
+ 
+          - name: product_id
+            description: "FK to silver_listing.id"
+            tests:
+              - not_null
+ 
+          - name: rating
+            tests:
+              - not_null
+              - accepted_values:
+                  values: [1, 2, 3, 4, 5]
+                  config: 
+                    severity: warn 
+ 
+          - name: extracted_at
+            tests:
+              - not_null

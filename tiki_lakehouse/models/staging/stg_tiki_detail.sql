@@ -52,5 +52,5 @@ select
 
     extracted_at
 
-from {{source ('silver', 'silver_detail')}}
+from {{ source ('silver', 'silver_detail')}}
 where product_id is not null
