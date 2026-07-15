@@ -10,10 +10,6 @@ models:
           - not_null
           - unique
 
-      - name: name
-        tests:
-          - not_null
-
       - name: price
         tests:
           - not_null
@@ -21,6 +17,9 @@ models:
       - name: rating_average
         tests:
           - not_null
+          - assert_not_null_when:        
+                when_column: has_reviews
+                when_value: "true"
 
       - name: discount_pct
         description: "Computed: (list_price - price) / list_price * 100"
@@ -33,6 +32,10 @@ models:
           - not_null
           - accepted_values:
               values: [true, false]
+      - name: name
+        tests:
+          - not_null
+          - assert_not_empty_string
 
   - name: fct_tiki_reviews
     description: "Gold fact table — reviews joined with book metadata"
@@ -56,3 +59,10 @@ models:
           - not_null
           - accepted_values:
               values: [1, 2, 3, 4, 5]
+      - name: reviewer_name
+        tests:
+          - assert_not_empty_string
+ 
+      - name: title
+        tests:
+          - assert_not_empty_string
